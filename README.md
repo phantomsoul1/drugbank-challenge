@@ -25,6 +25,7 @@ For each of these drugs, we are interested in these values:
 * Python library dependencies
     * Beautiful Soup 4 (https://www.crummy.com/software/BeautifulSoup/)
     * SQLAlchemy (https://www.sqlalchemy.org)
+    * html5lib (for Beautiful Soup 4) (pip install html5lib3)
 * Scripts were written and tested on Python version 3.7.6
 * Provide values for the 4 attributes in the config.py file, as specified there, in order to connect to the PostGRESQL database
 
