@@ -2,6 +2,21 @@ from bs4 import BeautifulSoup
 from pprint import pprint
 import requests
 
+# This is a farily simple scraping process that assumes much of the 
+# expected data is available. I did have to implement some exception
+# handling for the targets and actions, as different drugs have varying
+# degrees of information here, including some with none at all.
+
+# To imporve this process at larger scale, every query of the document
+# structure (find, find_all, next_sibling, text, etc.) should be wrapped
+# in a try/except block that addresses what to do if a given expected
+# element is not found, even if to just record a blank or skip that part
+# of the process. This way the process can continue for further iterations.
+
+# To be able to tell which iterations (drugs, or drug-targets, in this case)
+# finished successfully or not, the process should also log any missing
+# expected document elements, either by warning if the single incident does not 
+# compromise the extraction, or by error if it does.
 def scrape(drug_identifiers):
 
     # Base URL to Drugbank's drug listings
@@ -90,4 +105,4 @@ def scrape(drug_identifiers):
         except AttributeError:
             print(f"{drug['drug_bank_id']}: no alternative identifiers found")
 
-    return drugs;
+    return drugs
