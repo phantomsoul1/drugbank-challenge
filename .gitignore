@@ -1,0 +1,9 @@
+
+.DS_Store
+__pycache__/config.cpython-37.pyc
+__pycache__/load_sql.cpython-37.pyc
+__pycache__/scrape_drugbank.cpython-37.pyc
+wip/.ipynb_checkpoints/scraper-checkpoint.ipynb
+wip/.ipynb_checkpoints/single_scrape-checkpoint.ipynb
+wip/.ipynb_checkpoints/sql_transform-checkpoint.ipynb
+wip/__pycache__/config.cpython-37.pyc
